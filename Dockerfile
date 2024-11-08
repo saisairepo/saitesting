@@ -1,5 +1,5 @@
 # Use the official Nginx image from Docker Hub
-FROM nginx:latest
+FROM nginx:v1.0
 
 # Copy the website content to the default Nginx location
 COPY index.html /usr/share/nginx/html/index.html
