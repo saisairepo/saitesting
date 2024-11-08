@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: saitesting-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: saitesting
+  template:
+    metadata:
+      labels:
+        app: saitesting
+    spec:
+      containers:
+        - name: sai
+          image: saitesting:v1.0
+          ports:
+            - containerPort: 80
